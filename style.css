@@ -491,8 +491,33 @@ line-height: 32px;
     width:425px;
     margin-right:5px;
     margin-bottom:10px;
+    z-index:1;
 }
 
+.gift-pic{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gift-pic .picture{
+    position: relative;
+}
+
+.gift-pic .picture::before{
+    content:"";
+    top:0;
+    left:0;
+    position: absolute;
+    height:96%;
+    width:99%;
+    transition:0.6s;
+    border-radius:15px;
+}
+
+.gift-pic .picture:hover::before{
+    background-color:rgb(243, 172, 172);
+    opacity:0.5;
+}
 
 
 .subscribe{
